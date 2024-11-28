@@ -1,0 +1,373 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+a,
+label,
+input,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ffeb3b;
+}
+
+/* Underline Animation for Links */
+.navbar-links .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-links .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-user h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Content Container */
+.content-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.content-container h2 {
+    font-size: 24px;
+    color: #0078d4;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #0078d4;
+    color: #fff;
+}
+
+thead th {
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #005bb5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody td:last-child {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .content-container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Navbar Section with Animation */
+.navbar {
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    position: relative;
+    /* Required for hover effect */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    /* Required for underline animation */
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Animated Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Bounce Effect on List Item Hover */
+.nav-links li:hover {
+    animation: bounce 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Brand Styling */
+.brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}
+
+/* Custom Classes for Specific List Items */
+.center a {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.upward a:hover {
+    color: #00e676;
+}
+
+.forward a {
+    color: #ff1744;
+    font-style: italic;
+}
+
+.forward a:hover {
+    color: #ff5252;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures space between brand and links */
+    align-items: center;
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* Ensures equal spacing between all links */
+    flex-grow: 1;
+    /* Distributes space evenly */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    flex: 1;
+    /* Makes each list item take up equal space */
+    text-align: center;
+    /* Centers the text within each link */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Brand Styling */
+.brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+    /* Adds space between the brand and links */
+}
+
+.brand:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}

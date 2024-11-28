@@ -1,0 +1,284 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+a,
+label,
+select,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-logo h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo h2:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ffeb3b;
+}
+
+/* Underline Animation for Links */
+.navbar-links .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-links .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-user h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Search Section */
+.search-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.search-section h2 {
+    font-size: 22px;
+    color: #0078d4;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0078d4;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Trips Links Section */
+.trips-links {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.trips-links h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0078d4;
+}
+
+.trip-category {
+    margin-bottom: 15px;
+}
+
+.trip-category a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.trip-category a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-links .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+
+    .search-section,
+    .trips-links {
+        margin: 10px auto;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures space between brand and links */
+    align-items: center;
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* Ensures equal spacing between all links */
+    flex-grow: 1;
+    /* Distributes space evenly */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    flex: 1;
+    /* Makes each list item take up equal space */
+    text-align: center;
+    /* Centers the text within each link */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Brand Styling */
+.brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+    /* Adds space between the brand and links */
+}
+
+.brand:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}

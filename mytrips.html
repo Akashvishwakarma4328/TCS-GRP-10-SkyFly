@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips</title>
+    <link rel="stylesheet" href="mytrips.css">
+    <script src="mytrips.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="brand"><a href="home.html">SkyFly </a></li> <!-- Project name added here -->
+            <li><a href="home.html">Home</a></li>
+            <li class="center"><a href="myProfile.html">MyProfile</a></li>
+            <li class="upward"><a href="mytrips.html">MyTrips</a></li>
+            <li class="forward"><a href="login.html">Logout</a></li>
+        </ul>
+    
+    </nav>
+
+    <!-- Page Content -->
+    <div class="content-container">
+        <!-- Title and Search Form -->
+        <div class="search-section">
+            <h2>Search for Flights</h2>
+            <form id="searchForm">
+                <div class="input-container">
+                    <label for="origin">Origin:</label>
+                    <select id="origin" name="origin">
+                        <option value="New York">New York</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Miami">Miami</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="destination">Destination:</label>
+                    <select id="destination" name="destination">
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="New York">New York</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Miami">Miami</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="departure">Departure Date:</label>
+                    <input type="date" id="departure" name="departure">
+                </div>
+                <div class="input-container">
+                    <label for="numTravellers">Number of Travellers:</label>
+                    <input type="number" id="numTravellers" name="numTravellers" min="1" max="10">
+                </div>
+                <div class="input-container">
+                    <label for="class">Class:</label>
+                    <select id="class" name="class">
+                        <option value="Economy">Economy</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Trips Links Section -->
+        <div class="trips-links">
+            <h3>View Your Trips</h3>
+            <div class="trip-category">
+                <a href="upcoming.html">Upcoming Trips</a>
+            </div>
+            <div class="trip-category">
+                <a href="cancelled.html">Cancelled Trips</a>
+            </div>
+            <div class="trip-category">
+                <a href="completed.html">Completed Trips</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

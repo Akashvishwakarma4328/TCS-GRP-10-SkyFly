@@ -1,0 +1,381 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+button,
+input,
+label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Main Content Styling */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Home Container */
+.home-container {
+    text-align: center;
+}
+
+.home-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0078d4;
+}
+
+/* Profile Form Styling */
+#userProfile {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#userProfile h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+}
+
+input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+#editProfile {
+    background-color: #0078d4;
+    color: white;
+}
+
+#editProfile:hover {
+    background-color: #005bb5;
+}
+
+#saveProfile {
+    background-color: #28a745;
+    color: white;
+}
+
+#saveProfile:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#saveProfile:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+/* Logout Link */
+a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar Section with Animation */
+.navbar {
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    position: relative;
+    /* Required for hover effect */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    /* Required for underline animation */
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Animated Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Animated Dropdown Highlight Effect on Hover */
+.nav-links li:hover {
+    animation: bounce 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Brand Styling */
+.brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures space between brand and links */
+    align-items: center;
+    background-color: #0078d4;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* Ensures equal spacing between all links */
+    flex-grow: 1;
+    /* Distributes space evenly */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    flex: 1;
+    /* Makes each list item take up equal space */
+    text-align: center;
+    /* Centers the text within each link */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Brand Styling */
+.brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+    /* Adds space between the brand and links */
+}
+
+.brand:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}

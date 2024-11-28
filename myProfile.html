@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="myProfile.css">
+    <script src="myProfile.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="brand"><a href="home.html">SkyFly </a></li> <!-- Project name added here -->
+            <li><a href="home.html">Home</a></li>
+            <li class="center"><a href="myProfile.html">MyProfile</a></li>
+            <li class="upward"><a href="mytrips.html">MyTrips</a></li>
+            <li class="forward"><a href="login.html">Logout</a></li>
+        </ul>
+    
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Main Content Section Start -->
+    <main class="content">
+        <div class="home-container">
+            <h2>Welcome to My Profile</h2>
+            <p id="userGreeting"></p>
+
+            <div id="userProfile">
+                <h3>Your Profile Details</h3>
+                <form id="profileForm">
+                    <div class="input-container">
+                        <label for="userId">User ID:</label>
+                        <input type="text" id="userId" name="userId" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" disabled />
+                    </div>
+                    <div class="input-container">
+                        <label for="contact">Contact Number:</label>
+                        <input type="text" id="contact" name="contact" disabled />
+                    </div>
+                    <button type="button" id="editProfile">Edit</button>
+                    <button type="submit" id="saveProfile" disabled>Save</button>
+                </form>
+            </div>
+            <p><a href="login.html">Logout</a></p>
+        </div>
+    </main>
+    <!-- Main Content Section End -->
+</body>
+
+</html>
